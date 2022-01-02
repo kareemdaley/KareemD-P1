@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{7ED5645F-5458-4B52-A584-6C28862F84E8}|Default">
+  <MonoDevelop.Ide.ItemProperties.ThisProject PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="StoreLogic/Shopping.cs">
+    <Files>
+      <File FileName="Program.cs" Line="31" Column="76" />
+      <File FileName="StoreService.cs" Line="41" Column="14" />
+      <File FileName="Store.cs" Line="24" Column="1" />
+      <File FileName="Dto's/dtoUser.cs" Line="14" Column="2" />
+      <File FileName="StoreLogic/Shopping.cs" Line="5" Column="1" />
+      <File FileName="StoreLogic/PlaceOrder.cs" Line="21" Column="37" />
+      <File FileName="StoreLogic/GetTotal.cs" Line="12" Column="23" />
+      <File FileName="StoreLogic/Buying.cs" Line="8" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ThisProject" expanded="True">
+            <Node name="ThisProject" expanded="True">
+              <Node name="Dto's" expanded="True" />
+              <Node name="StoreLogic" expanded="True">
+                <Node name="Shopping.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

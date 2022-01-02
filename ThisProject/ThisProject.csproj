@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Dto%27s\" />
+    <None Remove="StoreLogic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dto%27s\" />
+    <Folder Include="StoreLogic\" />
+  </ItemGroup>
+</Project>

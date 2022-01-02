@@ -1,0 +1,15 @@
+/Users/kareem/Desktop/VS_Projects/ThisProject/obj/Debug/net6.0/ThisProject.csproj.AssemblyReference.cache
+/Users/kareem/Desktop/VS_Projects/ThisProject/obj/Debug/net6.0/ThisProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kareem/Desktop/VS_Projects/ThisProject/obj/Debug/net6.0/ThisProject.AssemblyInfoInputs.cache
+/Users/kareem/Desktop/VS_Projects/ThisProject/obj/Debug/net6.0/ThisProject.AssemblyInfo.cs
+/Users/kareem/Desktop/VS_Projects/ThisProject/obj/Debug/net6.0/ThisProject.csproj.CoreCompileInputs.cache
+/Users/kareem/Desktop/VS_Projects/ThisProject/bin/Debug/net6.0/ThisProject
+/Users/kareem/Desktop/VS_Projects/ThisProject/bin/Debug/net6.0/ThisProject.deps.json
+/Users/kareem/Desktop/VS_Projects/ThisProject/bin/Debug/net6.0/ThisProject.runtimeconfig.json
+/Users/kareem/Desktop/VS_Projects/ThisProject/bin/Debug/net6.0/ThisProject.dll
+/Users/kareem/Desktop/VS_Projects/ThisProject/bin/Debug/net6.0/ref/ThisProject.dll
+/Users/kareem/Desktop/VS_Projects/ThisProject/bin/Debug/net6.0/ThisProject.pdb
+/Users/kareem/Desktop/VS_Projects/ThisProject/obj/Debug/net6.0/ThisProject.dll
+/Users/kareem/Desktop/VS_Projects/ThisProject/obj/Debug/net6.0/ref/ThisProject.dll
+/Users/kareem/Desktop/VS_Projects/ThisProject/obj/Debug/net6.0/ThisProject.pdb
+/Users/kareem/Desktop/VS_Projects/ThisProject/obj/Debug/net6.0/ThisProject.genruntimeconfig.cache
