@@ -28,7 +28,17 @@ namespace CreateAPI.App.Controllers
             return new JsonResult(Transactions);
         }
 
-       
+        [HttpPost]
+        public async Task<IActionResult> AddNewRecordAsync([FromQuery] string orderID, string buyer, string store, int ordertotal)
+        {
+            IEnumerable<Transaction> Products = await _repository.AddNewOrderAsync( orderID,  buyer,  store,  ordertotal);
+
+
+
+            return new JsonResult(Products);
+        }
+
+
     } 
 }
 

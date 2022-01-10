@@ -49,6 +49,7 @@ namespace CreateAPI.App
         //    return result;
         //}
 
+        //================= Get Orders ========//
         public async Task<IEnumerable<Transaction>> GetOrderDetailsAsync(string name)
         {
             List<Transaction> result = new List<Transaction>();
@@ -71,7 +72,7 @@ namespace CreateAPI.App
             {
                 string id = reader["ID"].ToString();
                 string orderName = reader["nameonOrder"].ToString();
-                string orderTotal = reader["orderTotal"].ToString();
+                int orderTotal = (int)reader["orderTotal"];
                 string store = reader["store"].ToString();
                 result.Add(new(id, orderName, orderTotal, store));
                 Console.WriteLine($"Order id: {id} - {orderName} Total ${orderTotal}");
@@ -82,6 +83,48 @@ namespace CreateAPI.App
             return result;
         }
 
+        //==================ADD NEW ORDER=======//
+        public async Task<IEnumerable<Transaction>> AddNewOrderAsync(string orderID, string buyer, string Store, int ordertotal)
+        {
+            List<Transaction> result = new List<Transaction>();
+            using SqlConnection connection = new(_connectionString);
+            connection.Open();
+
+            // assume the order exist already in the DB
+            string cmdText = @"INSERT INTO shop.OrderSummary (nameonOrder, ID, orderTotal, store)
+                               VALUES (  @thisName, @thisOrder , @thisTotal, @storeRef);
+
+                                SELECT * FROM shop.OrderSummary
+                                WHERE ID = @thisOrder";
+            using SqlCommand cmd = new(cmdText, connection);
+
+            // ado.net requires you to use DBNull instead of null when you mean a SQL NULL value
+            cmd.Parameters.AddWithValue("@thisName", buyer);
+            cmd.Parameters.AddWithValue("@thisOrder", orderID);
+            cmd.Parameters.AddWithValue("@thisTotal", ordertotal);
+            cmd.Parameters.AddWithValue("@storeRef", Store);
+            //cmd.ExecuteNonQuery();
+            //connection.Close();
+
+            using SqlDataReader reader = cmd.ExecuteReader();
+
+            // get trx from db
+            while (reader.Read())
+            {
+                string id = reader["ID"].ToString();
+                string orderName = reader["nameonOrder"].ToString();
+                int orderTotal = (int)reader["orderTotal"];
+                string store = reader["store"].ToString();
+                result.Add(new(id, orderName, orderTotal, store));
+                Console.WriteLine($"Order id: {id} - {orderName} Total ${orderTotal}");
+
+
+            }
+
+            return result;
+        }
+
+        //================= Get Products =====//
         public async Task<IEnumerable<Product>> GetProductsAsync(string name)
         {
             List<Product> result = new List<Product>();
@@ -116,6 +159,7 @@ namespace CreateAPI.App
             return result;
         }
 
+        //================== SET INVENTORY ======//
         public async Task<IEnumerable<Product>> SetInventoryAsync(string item, int numLeft)
         {
             List<Product> result = new List<Product>();
@@ -144,7 +188,7 @@ namespace CreateAPI.App
                 int inventory = (int)reader["Inventory"];
                 string store = reader["store"].ToString();
                 result.Add(new(itemName, price, inventory, store));
-                Console.WriteLine($"{itemName} cost ${price} and there are {inventory} left at {store}");
+                Console.WriteLine($"{itemName}: {inventory} left at {store}");
 
             }
 
@@ -153,6 +197,7 @@ namespace CreateAPI.App
             return result;
         }
 
+        //============== Get User===========//
         public async Task<IEnumerable<User>> GetUsersAsync(string name)
         {
             List<User> result = new List<User>();
@@ -236,25 +281,7 @@ namespace CreateAPI.App
         //    connection.Close();
         //}
 
-        //public void AddNewTransaction(string orderID, string buyer, string store, int ordertotal)
-        //{
-        //    using SqlConnection connection = new(_connectionString);
-        //    connection.Open();
-
-        //    // assume the order exist already in the DB
-        //    string cmdText = @"INSERT INTO shop.OrderSummary (nameonOrder, ID, orderTotal, store)
-        //                       VALUES (  @thisName, @thisOrder , @thisTotal, @storeRef)";
-        //    using SqlCommand cmd = new(cmdText, connection);
-
-        //    // ado.net requires you to use DBNull instead of null when you mean a SQL NULL value
-        //    cmd.Parameters.AddWithValue("@thisName", buyer);
-        //    cmd.Parameters.AddWithValue("@thisOrder", orderID);
-        //    cmd.Parameters.AddWithValue("@thisTotal", ordertotal);
-        //    cmd.Parameters.AddWithValue("@storeRef", store);
-        //    cmd.ExecuteNonQuery();
-
-        //    connection.Close();
-        //}
+        
 
         /* THIS WORKS DONT FK WITH IT */
         //public void AddNewUser(string user)

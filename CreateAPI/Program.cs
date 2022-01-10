@@ -1,9 +1,9 @@
 ﻿
 using CreateAPI.App;
-var connectionString = "Server=tcp:daleyserver.database.windows.net,1433;Initial Catalog=ShopApp;Persist Security Info=False;User ID=dbadmin;Password=adminpw1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-IRepository repository = new SqlRepository(connectionString);
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = "Server=tcp:daleyserver.database.windows.net,1433;Initial Catalog=ShopApp;Persist Security Info=False;User ID=dbadmin;Password=adminpw1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+IRepository repository = new SqlRepository(connectionString);
 
 // Add services to the container.
 
