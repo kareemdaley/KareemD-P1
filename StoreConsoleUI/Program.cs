@@ -18,15 +18,29 @@ namespace ThisProject
                 Console.WriteLine("Enter valid name: ");
                 name = Console.ReadLine();
             }
-            await StoreService.newUser(name);
+            try
+            {
+                await StoreService.newUser(name);
+            }
+            catch(Exception)
+            {
+
+            }
            
             //=========Stores Creates & Products Loaded in==============//
             Store GeneralSupply = new Store("GeneralSupply");
-            await GeneralSupply.getProductsAsync();
             Store ProShop = new Store("ProShop");
-            await ProShop.getProductsAsync();
             Store QuikMart = new Store("QuikMart");
-            await QuikMart.getProductsAsync();
+            try
+            {
+                await GeneralSupply.getProductsAsync();
+                await ProShop.getProductsAsync();
+                await QuikMart.getProductsAsync();
+            }
+            catch(Exception)
+            {
+
+            }
 
             Shopping.startShopping(name, GeneralSupply, ProShop, QuikMart);
             
