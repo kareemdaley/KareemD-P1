@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kareem/Desktop/VS_Projects/CreateAPI/CreateAPI.App.csproj": {}
+    "/Users/kareem/Desktop/KareemD-P1/CreateAPI/CreateAPI.App.csproj": {}
   },
   "projects": {
-    "/Users/kareem/Desktop/VS_Projects/CreateAPI/CreateAPI.App.csproj": {
+    "/Users/kareem/Desktop/KareemD-P1/CreateAPI/CreateAPI.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kareem/Desktop/VS_Projects/CreateAPI/CreateAPI.App.csproj",
+        "projectUniqueName": "/Users/kareem/Desktop/KareemD-P1/CreateAPI/CreateAPI.App.csproj",
         "projectName": "CreateAPI.App",
-        "projectPath": "/Users/kareem/Desktop/VS_Projects/CreateAPI/CreateAPI.App.csproj",
+        "projectPath": "/Users/kareem/Desktop/KareemD-P1/CreateAPI/CreateAPI.App.csproj",
         "packagesPath": "/Users/kareem/.nuget/packages/",
-        "outputPath": "/Users/kareem/Desktop/VS_Projects/CreateAPI/obj/",
+        "outputPath": "/Users/kareem/Desktop/KareemD-P1/CreateAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/kareem/.config/NuGet/NuGet.Config"
+          "/Users/kareem/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
